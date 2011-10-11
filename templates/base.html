@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="{{ config.description }}">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="MobileOptimized" content="320">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/osae.js"></script>
+    <link rel="icon" href="/img/favicon.png">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/feeds/rss.xml">
+    <link rel="stylesheet" type="text/css" media="screen" href="static/css/default.css">
+    <title>OSAE - Open Sentiment Analysis Engine</title>
+  </head>
+  <body>
+    <header>
+    <h1>OSAE - Open Sentiment Analysis Engine</h1>
+    </header>
+    <form method="POST" action='/'>
+      <textarea type='text' class="sample" name='sample' readonly="readonly"></textarea>
+      <input type="submit" name="submit" value="negative">
+      <input type="submit" name="submit" value="neutral">
+      <input type="submit" name="submit" value="positive">
+    </form>
+    <footer>
+      <p>Your data is used to improve <a href="http://github.com/synt/synt">synt</a></p>
+      <p>Please be careful with your choices. Removing bad data is a lot of work.</p>
+    </footer>
+  </body>
+</html>
