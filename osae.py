@@ -43,7 +43,7 @@ def index():
         sample = request.form['sample']
         sentiment = request.form['submit']
         user_hash = hashlib.sha1('//'.join([str(request.user_agent), request.remote_addr])).hexdigest()
-        if sentiment != 'neutral':
+        if sentiment != 'skip':
             try:
                 g.db.execute('INSERT INTO item VALUES (NULL,?,?,?)',[user_hash,sample,sentiment])
                 g.db.commit()
